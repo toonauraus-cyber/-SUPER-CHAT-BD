@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#090d1b">
+  <title>SUPER CHAT BD — Creator Support</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="topbar">
+    <a class="brand" href="/"><span class="brand-mark">S</span><span>SUPER CHAT <b>BD</b></span></a>
+    <nav><a href="#how">How it works</a><a href="#supporters">Supporters</a></nav>
+    <div class="top-actions"><button class="btn btn-ghost" id="loginOpen">Sign in</button><button class="btn btn-primary" id="registerOpen">Become a creator</button></div>
+  </header>
+  <main id="app">
+    <section id="homeView" class="view">
+      <section class="hero wrap">
+        <div class="hero-copy">
+          <span class="eyebrow"><i></i> SUPPORT CREATORS • BUILD COMMUNITY</span>
+          <h1>Your fans.<br>Your support.<br><span>Your journey.</span></h1>
+          <p>A beautiful home for your community. Share one link or QR code, receive support, and show verified donations live on your stream.</p>
+          <div class="hero-actions"><button class="btn btn-primary btn-large" id="heroRegister">Create your creator page <span>↗</span></button><a class="text-link" href="#how">Explore how it works</a></div>
+          <div class="trust-row"><span>✦ Custom creator page</span><span>✦ Live donation alerts</span><span>✦ Local payment methods</span></div>
+        </div>
+        <div class="hero-preview">
+          <div class="preview-top"><span class="live-dot"></span> LIVE SUPPORT ALERT <span class="preview-dots">•••</span></div>
+          <div class="preview-amount"><div class="coin">৳</div><div><small>NEW SUPPORT</small><strong>৳500</strong><b>From a supporter ✨</b></div></div>
+          <div class="preview-message">“Keep creating amazing content. We are with you!”</div>
+          <div class="preview-wave"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+          <div class="preview-foot"><span>SUPER CHAT BD</span><span>INSTANT LIVE ALERT*</span></div>
+        </div>
+      </section>
+      <section class="wrap feature-strip" id="how">
+        <article><div class="feature-icon">↗</div><h3>One creator link</h3><p>Share your personal support page anywhere.</p></article>
+        <article><div class="feature-icon">▦</div><h3>Your QR code</h3><p>Let fans scan and support in seconds.</p></article>
+        <article><div class="feature-icon">◉</div><h3>Live chat alerts</h3><p>Verified donations appear on your creator screen.</p></article>
+        <article><div class="feature-icon">৳</div><h3>Flexible payouts</h3><p>Choose an available withdrawal method.</p></article>
+      </section>
+      <section class="wrap supporters-section" id="supporters">
+        <div><span class="eyebrow">MADE FOR YOUR COMMUNITY</span><h2>Every supporter<br>becomes part of your story.</h2></div>
+        <p>Build a creator page that feels like you. Add your photo, logo, banner and bio. Your supporters can leave a message with their donation.</p>
+      </section>
+      <footer class="footer wrap"><span>© <span id="year"></span> SUPER CHAT BD</span><span>Creator support platform</span></footer>
+    </section>
+
+    <section id="authView" class="view hidden">
+      <div class="auth-card panel">
+        <button class="back-link" id="backHome">← Back to home</button>
+        <span class="eyebrow">YOUR CREATOR JOURNEY STARTS HERE</span>
+        <h2 id="authTitle">Welcome back</h2><p id="authSubtitle">Sign in to manage your creator page.</p>
+        <form id="authForm">
+          <div id="nameField" class="field hidden"><label>Your name</label><input name="name" minlength="2" placeholder="Your display name"></div>
+          <div class="field"><label>Email address</label><input name="email" type="email" required placeholder="you@example.com"></div>
+          <div class="field"><label>Password</label><input name="password" type="password" required minlength="10" placeholder="At least 10 characters"></div>
+          <button class="btn btn-primary full" id="authSubmit">Sign in</button>
+        </form>
+        <p class="auth-switch" id="authSwitch">New here? <button id="switchRegister">Create an account</button></p>
+        <div class="notice" id="authNotice"></div>
+      </div>
+    </section>
+
+    <section id="creatorView" class="view hidden wrap dashboard-wrap">
+      <div class="dash-heading"><div><span class="eyebrow">CREATOR STUDIO</span><h1>Welcome, <span id="creatorGreeting">Creator</span></h1><p>Manage your page, supporters and withdrawals.</p></div><button class="btn btn-ghost" id="logoutCreator">Sign out</button></div>
+      <div class="stats-grid">
+        <article class="stat-card"><small>Verified support</small><strong id="statTotal">৳0</strong></article>
+        <article class="stat-card"><small>Verified donations</small><strong id="statCount">0</strong></article>
+        <article class="stat-card"><small>Awaiting review</small><strong id="statPending">0</strong></article>
+      </div>
+      <div class="creator-layout">
+        <div class="panel">
+          <div class="panel-heading"><div><span class="eyebrow">YOUR PUBLIC PAGE</span><h2>Creator profile</h2></div><a id="publicPageLink" class="btn btn-small btn-ghost" target="_blank">View page ↗</a></div>
+          <form id="profileForm">
+            <div class="field"><label>Display name</label><input name="displayName" required maxlength="100"></div>
+            <div class="field"><label>About / Bio</label><textarea name="bio" rows="3" maxlength="500" placeholder="Tell your supporters about yourself..."></textarea></div>
+            <div class="field"><label>Profile photo URL</label><input name="avatarUrl" type="url" placeholder="https://..."></div>
+            <div class="field"><label>Logo URL</label><input name="logoUrl" type="url" placeholder="https://..."></div>
+            <div class="field"><label>Banner image URL</label><input name="bannerUrl" type="url" placeholder="https://..."></div>
+            <div class="field"><label>Theme color</label><input name="themeColor" type="color" value="#7657ff"></div>
+            <button class="btn btn-primary">Save profile</button>
+          </form>
+          <div class="notice" id="profileNotice"></div>
+        </div>
+        <div class="panel">
+          <span class="eyebrow">SHARE YOUR PAGE</span><h2>Your support link</h2>
+          <div class="share-url" id="creatorUrl">Loading...</div>
+          <button class="btn btn-ghost full" id="copyLink">Copy creator link</button>
+          <div id="qrBox" class="qr-box"><div id="qrCode"></div><small>Scan to open your creator page</small></div>
+          <p class="muted small">Keep this link in your video description, social profile or pinned comment.</p>
+          <div class="divider"></div>
+          <span class="eyebrow">WITHDRAWABLE BALANCE</span><strong class="balance" id="availableBalance">৳0.00</strong>
+          <form id="withdrawForm">
+            <div class="field"><label>Amount (BDT)</label><input name="amount" type="number" min="1" step="0.01" required placeholder="Amount"></div>
+            <div class="field"><label>Withdrawal method</label><select name="method" id="withdrawMethod" required></select></div>
+            <div class="field"><label>Receiving account / bank details</label><input name="accountDetails" required placeholder="Account number / bank account details"></div>
+            <div class="field"><label>Note (optional)</label><input name="note" placeholder="Optional note"></div>
+            <button class="btn btn-primary full">Request withdrawal</button>
+          </form><div class="notice" id="withdrawNotice"></div>
+        </div>
+      </div>
+      <div class="panel table-panel"><div class="panel-heading"><div><span class="eyebrow">COMMUNITY ACTIVITY</span><h2>Recent supporters</h2></div></div><div id="creatorDonations" class="table-wrap"></div></div>
+      <div class="panel table-panel"><h2>Withdrawal history</h2><div id="creatorWithdrawals" class="table-wrap"></div></div>
+    </section>
+
+    <section id="adminView" class="view hidden wrap dashboard-wrap">
+      <div class="dash-heading"><div><span class="eyebrow">PLATFORM CONTROL CENTER</span><h1>Admin dashboard</h1><p>Manage creators, donations, payment options and withdrawals.</p></div><button class="btn btn-ghost" id="logoutAdmin">Sign out</button></div>
+      <div class="stats-grid">
+        <article class="stat-card"><small>Registered creators</small><strong id="adminCreators">0</strong></article>
+        <article class="stat-card"><small>Pending donations</small><strong id="adminPending">0</strong></article>
+        <article class="stat-card"><small>Verified donation total</small><strong id="adminVerified">৳0</strong></article>
+        <article class="stat-card"><small>Pending withdrawals</small><strong id="adminWithdrawPending">0</strong></article>
+      </div>
+      <div class="tabs" id="adminTabs">
+        <button class="tab active" data-tab="donations">Donations</button><button class="tab" data-tab="creators">Creators</button><button class="tab" data-tab="payments">Payment methods</button><button class="tab" data-tab="withdrawals">Withdrawals</button><button class="tab" data-tab="settings">Settings</button>
+      </div>
+      <div id="adminDonations" class="panel admin-panel"></div>
+      <div id="adminCreatorsPanel" class="panel admin-panel hidden"></div>
+      <div id="adminPayments" class="panel admin-panel hidden"></div>
+      <div id="adminWithdrawals" class="panel admin-panel hidden"></div>
+      <div id="adminSettings" class="panel admin-panel hidden"></div>
+    </section>
+
+    <section id="publicView" class="view hidden public-wrap">
+      <div class="public-top wrap"><a class="brand" href="/"><span class="brand-mark">S</span><span>SUPER CHAT <b>BD</b></span></a><span class="public-tag">CREATOR SUPPORT PAGE</span></div>
+      <div class="public-banner" id="publicBanner"></div>
+      <div class="public-content wrap">
+        <div class="public-profile panel">
+          <img id="publicAvatar" class="public-avatar" alt="Creator profile">
+          <div><h1 id="publicName">Creator</h1><p id="publicBio"></p></div>
+          <img id="publicLogo" class="public-logo hidden" alt="Creator logo">
+        </div>
+        <div class="public-grid">
+          <div class="panel donate-panel">
+            <span class="eyebrow">SHOW YOUR SUPPORT</span><h2>Buy <span id="supportCreatorName">the creator</span> a treat ☕</h2>
+            <p class="muted">Send a donation and leave a message that may appear in the creator's live alert after payment verification.</p>
+            <form id="donationForm">
+              <div class="amount-picks"><button type="button" data-amount="50">৳50</button><button type="button" data-amount="100">৳100</button><button type="button" data-amount="200">৳200</button><button type="button" data-amount="500">৳500</button><button type="button" data-amount="1000">৳1000</button></div>
+              <div class="field"><label>Donation amount (BDT)</label><input name="amount" type="number" min="10" step="1" required placeholder="Enter amount"></div>
+              <div class="field"><label>Your name</label><input name="donorName" maxlength="80" placeholder="Your name"></div>
+              <div class="field"><label>Message (optional)</label><textarea name="message" rows="3" maxlength="300" placeholder="Write a message to the creator..."></textarea></div>
+              <label class="checkline"><input type="checkbox" name="anonymous"> Send anonymously</label>
+              <div class="field"><label>Payment channel</label><div id="publicPaymentMethods" class="payment-options"><p class="muted">Loading available methods...</p></div></div>
+              <div id="paymentInstructions" class="payment-instructions hidden"></div>
+              <div class="field"><label>Transaction ID / payment reference</label><input name="transactionReference" required placeholder="Enter transaction ID after payment"></div>
+              <button class="btn btn-primary btn-large full">Submit donation <span>→</span></button>
+            </form>
+            <div class="notice" id="donationNotice"></div>
+            <p class="secure-note">🔒 Payment verification is handled securely by the platform administrator in this version.</p>
+          </div>
+          <div class="panel supporter-panel"><span class="eyebrow">COMMUNITY LOVE</span><h2>Recent supporters</h2><div id="publicSupporters" class="supporter-list"></div></div>
+        </div>
+      </div>
+      <footer class="footer wrap"><span>Powered by SUPER CHAT BD</span><span>Support creators. Build community.</span></footer>
+    </section>
+  </main>
+
+  <div id="alertOverlay" class="alert-overlay hidden">
+    <div class="live-alert"><div class="alert-label"><span class="live-dot"></span> NEW SUPPORT!</div><div class="alert-amount" id="alertAmount">৳100</div><div class="alert-from" id="alertFrom">A supporter</div><div class="alert-message" id="alertMessage"></div><div class="alert-brand">SUPER CHAT BD</div><button id="closeAlert" class="alert-close">×</button></div>
+  </div>
+  <div id="toast" class="toast"></div>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <script src="/app.js"></script>
+</body>
+</html>

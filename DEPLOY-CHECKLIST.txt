@@ -1,0 +1,12 @@
+SUPER CHAT BD - QUICK DEPLOY CHECKLIST
+
+1) Upload all files and the public/ folder to a NEW GitHub repository.
+2) Render -> New + -> Blueprint -> connect repository.
+3) Set ADMIN_EMAIL, ADMIN_PASSWORD (12+ chars), BASE_URL in Render Environment.
+4) Wait for deployment to finish.
+5) Open /api/health and confirm database=connected.
+6) Sign in using the admin credentials you configured.
+7) In Admin -> Payment methods, enter your real receiving account details and instructions.
+8) Keep payment methods disabled until their details are correct.
+9) Admin verifies donation references manually. Only verified donations trigger the creator live alert.
+10) Do not ask donors for banking PIN or OTP. Add official gateway verification later through provider APIs/webhooks.
